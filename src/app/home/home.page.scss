@@ -1,27 +1,71 @@
-#container {
+.login-logo{
+  width: 100px;
+  margin-top: 30px;
+}
+
+.logout{
+  text-align: right;
+  margin-top: 40px;
+}
+
+.welcome-msg-wrapper{
   text-align: center;
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+.feeling-msg-wrapper{
+  text-align: center;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-top: 0px !important;
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
+ion-button{
+  width: 100%;
+  height: 100%;
+  font-size: large;
 }
 
-#container a {
-  text-decoration: none;
+.text{  
+  padding-right: 3px;
+  margin-top: 7px;
+}
+
+ion-col {
+display: inline-flex;
+}
+
+ion-row{
+  height: 50px;
+}
+
+.welcome-spacing{
+  margin-top: 33px;
+}
+
+.seven{
+  --background: #225656;
+}
+
+.six{
+  --background:#2d7272;
+}
+
+.five{
+  --background:#388e8e;
+}
+
+.four{
+  --background:#43aaaa;
+}
+
+.three{
+  --background:#58bdbd;
+}
+
+.two{
+  --background:#74c8c8;
+}
+
+.one{
+  --background:#9ed9d9;
 }

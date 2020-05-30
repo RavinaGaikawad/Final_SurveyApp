@@ -1,20 +1,72 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content>
+  <ion-item lines="none">
+    <ion-img slot="start" class="login-logo" src="../assets/images/UNCC_Logo.jpeg"></ion-img>
+    <ion-label class="logout" slot="end" color="danger" button (click)="doGoogleLogout()">
+      Logout
+    </ion-label>
+  </ion-item>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-text color="dark" class="welcome-msg-wrapper">
+    <h2 class="welcome-spacing">Welcome John!</h2>
+    <h2 class="feeling-msg-wrapper">How are feeling on a scale of 1-7?</h2>
+  </ion-text>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-grid>
+    <ion-row style="display: flex;">
+      <ion-col size="4" class="ion-align-self-start">
+        <ion-text class="text" color="dark">Very Positive</ion-text>
+      </ion-col>
+      <ion-col>
+        <ion-button class="seven" (click)="openAudio()" >7</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row style="display: flex;">
+      <ion-col size="4" class="ion-align-self-center">
+        <ion-text class="text" color="dark">Positive</ion-text>
+      </ion-col>
+      <ion-col>
+        <ion-button class="six" (click)="openAudio()">6</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="4" class="ion-align-self-center">
+        <ion-text class="text" color="dark">Positive</ion-text>
+      </ion-col>
+      <ion-col>
+        <ion-button class="five" (click)="openAudio()">5</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="4" class="ion-align-self-center">
+        <ion-text class="text" color="dark">Neutral</ion-text>
+      </ion-col>
+      <ion-col>
+        <ion-button class="four" (click)="openAudio()">4</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="4" class="ion-align-self-center">
+        <ion-text class="text" color="dark">Negative</ion-text>
+      </ion-col>
+      <ion-col>
+        <ion-button class="three" (click)="openAudio()">3</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="4" class="ion-align-self-center">
+        <ion-text class="text" color="dark">Negative</ion-text>
+      </ion-col>
+      <ion-col>
+        <ion-button class="two" (click)="openAudio()">2</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row style="display: flex;">
+      <ion-col size="4" class="ion-align-self-start">
+        <ion-text class="text" color="dark">Very Negative</ion-text>
+      </ion-col>
+      <ion-col>
+        <ion-button class="one" (click)="openAudio()">1</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

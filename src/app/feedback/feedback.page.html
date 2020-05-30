@@ -1,0 +1,72 @@
+<ion-content>
+  <ion-item lines="none">
+    <ion-img slot="start" class="login-logo" src="../assets/images/UNCC_Logo.jpeg"></ion-img>
+    <ion-label class="logout" slot="end" color="danger" button (click)="doGoogleLogout()">
+      Logout
+    </ion-label>
+  </ion-item>
+
+  <ion-text color="dark" class="welcome-msg-wrapper">
+    <h2 class="welcome-spacing">Thank you for listening.</h2>
+    <h2 class="feeling-msg-wrapper">How are feeling now on a scale of 1-7?</h2>
+  </ion-text>
+
+  <ion-grid>
+    <ion-row style="display: flex;">
+      <ion-col size="4" class="ion-align-self-start">
+        <ion-text class="text" color="dark">Very Positive</ion-text>
+      </ion-col>
+      <ion-col>
+        <ion-button class="seven" (click)="popup()" >7</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row style="display: flex;">
+      <ion-col size="4" class="ion-align-self-center">
+        <ion-text class="text" color="dark">Positive</ion-text>
+      </ion-col>
+      <ion-col>
+        <ion-button class="six" (click)="popup()">6</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="4" class="ion-align-self-center">
+        <ion-text class="text" color="dark">Positive</ion-text>
+      </ion-col>
+      <ion-col>
+        <ion-button class="five" (click)="popup()">5</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="4" class="ion-align-self-center">
+        <ion-text class="text" color="dark">Neutral</ion-text>
+      </ion-col>
+      <ion-col>
+        <ion-button class="four" (click)="popup()">4</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="4" class="ion-align-self-center">
+        <ion-text class="text" color="dark">Negative</ion-text>
+      </ion-col>
+      <ion-col>
+        <ion-button class="three" (click)="popup()">3</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="4" class="ion-align-self-center">
+        <ion-text class="text" color="dark">Negative</ion-text>
+      </ion-col>
+      <ion-col>
+        <ion-button class="two" (click)="popup()">2</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row style="display: flex;">
+      <ion-col size="4" class="ion-align-self-start">
+        <ion-text class="text" color="dark">Very Negative</ion-text>
+      </ion-col>
+      <ion-col>
+        <ion-button class="one" (click)="popup()">1</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

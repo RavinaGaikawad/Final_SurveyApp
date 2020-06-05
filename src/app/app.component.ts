@@ -7,6 +7,9 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { NativeStorage } from '@ionic-native/native-storage/ngx';
 import { Router } from '@angular/router';
 
+import { environment } from 'src/environments/environment';
+import * as firebase from 'firebase';
+
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
@@ -21,24 +24,14 @@ export class AppComponent {
     private router: Router
   ) {
     this.initializeApp();
+    firebase.initializeApp(environment.firebase);
   }
-
-  // initializeApp() {
-  //   this.platform.ready().then(() => {
-  //     this.statusBar.styleDefault();
-  //     this.splashScreen.hide();
-  //   });
-  // }
 
   initializeApp() {
     this.platform.ready().then(() => {
-      //Here we will check if the user is already logged in
-      //because we don't want to ask users to log in each time they open the app
       this.nativeStorage.getItem('google_user')
       .then( data =>{
-        // user is previously logged and we have his data
-        // we will let him access the app
-        console.log(data);
+        console.log("already logged in "+ data.name);
         this.router.navigate(["/home"]);
         this.splashScreen.hide();
       }, error =>{

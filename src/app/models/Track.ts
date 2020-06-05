@@ -1,4 +1,4 @@
 export interface Track{
-    name: string,
-    path: string
+    moodID: string,
+    audioURL: string
 }

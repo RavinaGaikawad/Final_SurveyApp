@@ -1,0 +1,30 @@
+[
+    {
+        "moodID": "1",
+        "audioURL": "audio/bensound-cute.mp3"
+    },
+    {
+        "moodID": "2",
+        "audioURL": "audio/bensound-cute.mp3"
+    },
+    {
+        "moodID": "3",
+        "audioURL": "audio/bensound-cute.mp3"
+    },
+    {
+        "moodID": "4",
+        "audioURL": "audio/bensound-cute.mp3"
+    },
+    {
+        "moodID": "5",
+        "audioURL": "audio/bensound-cute.mp3"
+    },
+    {
+        "moodID": "6",
+        "audioURL": "audio/bensound-cute.mp3"
+    },
+    {
+        "moodID": "7",
+        "audioURL": "audio/bensound-cute.mp3"
+    }
+]

@@ -3,6 +3,7 @@ import { LoadingController } from '@ionic/angular';
 import {GooglePlus} from '@ionic-native/google-plus/ngx';
 import {NativeStorage} from '@ionic-native/native-storage/ngx';
 import {Router} from '@angular/router';
+import {Record} from '../models/Record';
 
 @Component({
   selector: 'app-login',
@@ -10,6 +11,15 @@ import {Router} from '@angular/router';
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
+  record: Record = {
+    id: "",
+    emailID: "",
+    firstName: "",
+    mood_before: "",
+    audio: "",
+    mood_after: "",
+    recorded_time:""
+  };
 
   constructor(
     private loadingController: LoadingController,
@@ -38,11 +48,17 @@ export class LoginPage implements OnInit {
   
       this.nativeStorage.setItem('google_user', {
         name: user.displayName,
-        email: user.email,
-        picture: user.imageUrl
+        email: user.email
+      })
+      
+      this.record.emailID = user.email;
+      this.record.firstName = user.givenName;
+
+      this.nativeStorage.setItem('record',{
+        record : JSON.stringify(this.record)
       })
       .then(() =>{
-        this.router.navigate(["/home", {email: user.email}]);
+        this.router.navigate(["/home"]);
       }, error =>{
         console.log(error);
       })

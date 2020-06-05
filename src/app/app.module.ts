@@ -12,6 +12,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { NativeStorage } from '@ionic-native/native-storage/ngx';
 import {GooglePlus} from '@ionic-native/google-plus/ngx';
 
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],

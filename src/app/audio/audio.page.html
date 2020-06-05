@@ -14,24 +14,30 @@
       Logout
     </ion-label>
   </ion-item>
+  <div class="div-padding"></div>
 
   <ion-text color="dark" class="welcome-msg-wrapper">
     <h2 class="feeling-msg-wrapper">Play whenever you are ready.</h2>
   </ion-text>
 
 
-  <ion-card *ngIf="activeTrack" no-margin>
-    <ion-card-content>
-      <ion-toolbar color="dark">
+  <ion-card *ngIf="activeTrack" no-margin color="dark" class="card">
+    <ion-card-content color="dark">
+      <ion-toolbar color="dark" class="toolbar">
         <ion-row>
           <ion-col size="12" class="ion-text-center">
             {{activeTrack.name}}
           </ion-col>
-          <ion-col size="12">
+          <ion-col class="play-button-wrapper" color="dark">
+            <ion-button (click)="start()" *ngIf="!play" >
+              Play
+            </ion-button>
+          </ion-col>
+          <ion-col size="12" *ngIf="play" color="dark">
             <ion-range #range [(ngModel)]="progress" max="100" color="success" (touchend)="seek()" (mouseup)="seek()">
             </ion-range>
           </ion-col>
-          <ion-col size="12" class="ion-text-center">
+          <ion-col size="12" class="ion-text-center" *ngIf="play" color="dark">
             <ion-button fill="clear" (click)="togglePlayer(false)" *ngIf="!isPlaying" color="light">
               <ion-icon slot="icon-only" name="play"></ion-icon>
             </ion-button>
